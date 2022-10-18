@@ -10,7 +10,41 @@
 </head>
 
 <body>
-
+    <div id="timer"></div>
+    <div id="start">
+        <h1>Coding Assesment</h1>
+        <p>You have 1 minute to answer 10 questions. Incorrect asnwers will knock 5 seconds off your time. The quiz is
+            over when all questions are answered or the timer runs out. Click "Start" to begin.</p>
+        <button>Start</button>
+    </div>
+    <div id="quiz">
+        <h2><span id="question"></span></h2>
+        <ol>
+            <li id="1"></li>
+            <li id="2"></li>
+            <li id="3"></li>
+            <li id="4"></li>
+        </ol>
+        <h3 id="answer"></h3>
+    </div>
+    <div id="final">
+        <h2>Finished!</h2>
+        <p>Your score this round is <span id="score"></span></p>
+        <form>
+            <label for="text">Enter Your Initials:</label>
+            <input type="text" placeholder="AAA"/><button>Submit</button>
+        </form>
+    </div>
+    <div id="highscore">
+        <h2><span>Highscores</span></h2>
+        <ol>
+            <li></li>
+        </ol>
+        <div id="restart">
+            <button>Play Again</button>
+            <button>Clear Highscores</button>
+        </ul>
+    </div>
     <script src="./assets/scripts.js"></script>
 </body>
 
