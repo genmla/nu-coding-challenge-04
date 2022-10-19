@@ -34,28 +34,44 @@ var highscore = document.getElementById("highscore")
 var againBtn = document.getElementById("againBtn")
 var clearBtn = document.getAnimations("clearBtn")
 
+// function init() {
+//     start.style.display ="block"
+// }
+
+// init()
+
 startBtn.addEventListener("click", function() {
-    start.setAttribute("style", "display:none;")
-    quiz.setAttribute("style", "")
+    start.style.display = "none";
+    quiz.style.display = "block";
 })
 
 
 // for the quiz card, have answers be event targets
 quiz.addEventListener("click", function(event) {
-    var answer = event.target
+    var answer = event.target;
 
     if (answer.matches("li")) {
-        quiz.setAttribute("style", "display:none;")
-        final.setAttribute("style", "")
+        quiz.style.display = "none";
+        final.style.display = "block";
     }
+});
+
+//issue: does not display highscore div and it is driving me crazy 
+//PREVENT DEFAULT DUDE IT WAS A FOOOOOORM!!!
+submitBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    final.style.display = "none";
+    highscore.style.display = "block";
 })
 
-//issue: does not display highscore 
-submitBtn.addEventListener("click", function() {
-    final.setAttribute("style", "display:none;")
-    highscore.setAttribute("style", "")
+againBtn.addEventListener("click", function() {
+    highscore.style.display = "none"
+    start.style.display = "block"
 })
 
+// clearBtn.addEventListener("click", function() {
+
+// })
 // container.addEventListener("click", function(event) {
 //     var element = event.target;
   
