@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="/assets/style.css" />
+    <link rel="stylesheet" href="assets/style.css">
     <title>Coding Assesment</title>
 </head>
 
@@ -15,35 +15,137 @@
         <h1>Coding Assesment</h1>
         <p>You have 1 minute to answer 10 questions. Incorrect asnwers will knock 5 seconds off your time. The quiz is
             over when all questions are answered or the timer runs out. Click "Start" to begin.</p>
-        <button>Start</button>
+        <button id="startBtn">Start</button>
     </div>
-    <div id="quiz">
-        <h2><span id="question"></span></h2>
-        <ol>
-            <li id="1"></li>
-            <li id="2"></li>
-            <li id="3"></li>
-            <li id="4"></li>
-        </ol>
-        <h3 id="answer"></h3>
+    <div id="quiz" style="display: none;">
+        <div id="q1">
+            <h2>Question1</h2>
+            <ol>
+                <li id="1">A</li>
+                <li id="2">B</li>
+                <li id="correct">C</li>
+                <li id="4">D</li>
+            </ol>
+            <hr style="display: none;">
+            <h3 id="answer" style="display: none;">Answer</h3>
+        </div>
+        <div id="q2">
+            <h2>Question2</h2>
+            <ol>
+                <li id="correct">A</li>
+                <li id="2">B</li>
+                <li id="3">C</li>
+                <li id="4">D</li>
+            </ol>
+            <hr style="display: none;">
+            <h3 id="answer" style="display: none;">Answer</h3>
+        </div>
+        <div id="q3">
+            <h2>Question3</h2>
+            <ol>
+                <li id="1">A</li>
+                <li id="correct">B</li>
+                <li id="3">C</li>
+                <li id="4">D</li>
+            </ol>
+            <hr style="display: none;">
+            <h3 id="answer" style="display: none;">Answer</h3>
+        </div>
+        <div id="q4">
+            <h2>Question4</h2>
+            <ol>
+                <li id="1">A</li>
+                <li id="2">B</li>
+                <li id="correct">C</li>
+                <li id="4">D</li>
+            </ol>
+            <hr style="display: none;">
+            <h3 id="answer" style="display: none;">Answer</h3>
+        </div>
+        <div id="q5">
+            <h2>Question5</h2>
+            <ol>
+                <li id="1">A</li>
+                <li id="2">B</li>
+                <li id="3">C</li>
+                <li id="correct">D</li>
+            </ol>
+            <hr style="display: none;">
+            <h3 id="answer" style="display: none;">Answer</h3>
+        </div>
+        <div id="q6">
+            <h2>Question6</h2>
+            <ol>
+                <li id="1">A</li>
+                <li id="2">B</li>
+                <li id="correct">C</li>
+                <li id="4">D</li>
+            </ol>
+            <hr style="display: none;">
+            <h3 id="answer" style="display: none;">Answer</h3>
+        </div>
+        <div id="q7">
+            <h2>Question7</h2>
+            <ol>
+                <li id="1">A</li>
+                <li id="2">B</li>
+                <li id="3">C</li>
+                <li id="correct">D</li>
+            </ol>
+            <hr style="display: none;">
+            <h3 id="answer" style="display: none;">Answer</h3>
+        </div>
+        <div id="q8">
+            <h2>Question8</h2>
+            <ol>
+                <li id="1">A</li>
+                <li id="correct">B</li>
+                <li id="3">C</li>
+                <li id="4">D</li>
+            </ol>
+            <hr style="display: none;">
+            <h3 id="answer" style="display: none;">Answer</h3>
+        </div>
+        <div id="q9">
+            <h2>Question9</h2>
+            <ol>
+                <li id="1">A</li>
+                <li id="2">B</li>
+                <li id="correct">C</li>
+                <li id="4">D</li>
+            </ol>
+            <hr style="display: none;">
+            <h3 id="answer" style="display: none;">Answer</h3>
+        </div>
+        <div id="q10">
+            <h2>Question10</h2>
+            <ol>
+                <li id="1">A</li>
+                <li id="2">B</li>
+                <li id="correct">C</li>
+                <li id="4">D</li>
+            </ol>
+            <hr style="display: none;">
+            <h3 id="answer" style="display: none;">Answer</h3>
+        </div>
     </div>
-    <div id="final">
+    <div id="final" style="display: none;">
         <h2>Finished!</h2>
         <p>Your score this round is <span id="score"></span></p>
         <form>
             <label for="text">Enter Your Initials:</label>
-            <input type="text" placeholder="AAA"/><button>Submit</button>
+            <input type="text" placeholder="AAA" /><button id="submitBtn">Submit</button>
         </form>
     </div>
-    <div id="highscore">
+    <div id="highscore" style="display: none;">
         <h2><span>Highscores</span></h2>
         <ol>
             <li></li>
         </ol>
         <div id="restart">
-            <button>Play Again</button>
-            <button>Clear Highscores</button>
-        </ul>
+            <button id="againBtn">Play Again</button>
+            <button id="clearBtn">Clear Highscores</button>
+        </div>
     </div>
     <script src="./assets/scripts.js"></script>
 </body>
