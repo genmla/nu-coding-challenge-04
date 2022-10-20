@@ -27,18 +27,22 @@
 
 var start = document.getElementById("start")
 var startBtn = document.getElementById("startBtn") 
+var time = 60
 var quiz = document.getElementById("quiz")
+var correct = document.getElementById("correct")
+var score = 0
+var line = document.getElementById("line")
+var correctmsg = document.getElementById("correctmsg")
+var incorrectmsg = document.getElementById("incorrectmsg")
+var nextBtn = document.getElementById("next")
 var final = document.getElementById("final")
+
 var submitBtn = document.getElementById("submitBtn")
 var highscore = document.getElementById("highscore")
+var highscoresList = document.getElementById("highscoresList")
 var againBtn = document.getElementById("againBtn")
-var clearBtn = document.getAnimations("clearBtn")
+var clearBtn = document.getElementById("clearBtn")
 
-// function init() {
-//     start.style.display ="block"
-// }
-
-// init()
 
 startBtn.addEventListener("click", function() {
     start.style.display = "none";
@@ -50,11 +54,30 @@ startBtn.addEventListener("click", function() {
 quiz.addEventListener("click", function(event) {
     var answer = event.target;
 
-    if (answer.matches("li")) {
-        quiz.style.display = "none";
-        final.style.display = "block";
+    if (answer === correct) {
+        line.style.display = "block"
+        correctmsg.style.display = "block"
+        nextBtn.style.display = "block"
+        score = score+10
+    }
+    else if (answer.matches("li")) {
+        line.style.display = "block"
+        incorrectmsg.style.display = "block"
+        nextBtn.style.display = "block"
+        time-5
     }
 });
+
+    nextBtn.addEventListener("click", function () {
+
+
+        quiz.style.display = "none";
+        final.style.display = "block";
+        var finalscore = document.createElement("p")
+        finalscore.textContent = "You scored " + (score + time) + " this round!"
+        final.children[1].appendChild(finalscore)
+    })
+    
 
 //issue: does not display highscore div and it is driving me crazy 
 //PREVENT DEFAULT DUDE IT WAS A FOOOOOORM!!!
@@ -65,10 +88,12 @@ submitBtn.addEventListener("click", function(event) {
 })
 
 againBtn.addEventListener("click", function() {
-    highscore.style.display = "none"
-    start.style.display = "block"
+    location.reload()
 })
 
+clearBtn.addEventListener("click", function() {
+    highscoresList.innerHTML = ""
+})
 // clearBtn.addEventListener("click", function() {
 
 // })
