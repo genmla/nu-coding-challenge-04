@@ -11,14 +11,14 @@
 
 <body>
     <div id="timer"></div>
-    <div id="start" >
+    <div id="start">
         <h1>Coding Assesment</h1>
         <p>You have 1 minute to answer 10 questions. Incorrect asnwers will knock 5 seconds off your time. The quiz is
             over when all questions are answered or the timer runs out. Click "Start" to begin.</p>
         <button id="startBtn">Start</button>
     </div>
     <div id="quiz" style="display: none;">
-        <div id="q1">
+        <div class="question">
             <h2>By default, what happens to a form element after information is submitted?</h2>
             <ol>
                 <li id="1">It turns into emojis you don't understand</li>
@@ -27,7 +27,7 @@
                 <li id="4">It is lost forever to the DMV but your late fee still applies</li>
             </ol>
         </div>
-        <div id="q2" style="display: none;">
+        <div class="question" style="display: none;">
             <h2>Did it work?</h2>
             <ol>
                 <li id="correct">Yes!</li>
@@ -36,83 +36,85 @@
                 <li id="4">Definitely not</li>
             </ol>
         </div>
-        <div id="q3" style="display: none;">
-            <h2>Question3 </h2>
+
+        <div class="question" style="display: none;">
+            <h2>What is even happening rn? </h2>
             <ol>
-                <li id="1">A</li>
-                <li id="correct">B</li>
-                <li id="3">C</li>
-                <li id="4">D</li>
+                <li id="incorrect">A</li>
+                <li id="correct">No Idea</li>
+                <li id="incorrect">C</li>
+                <li id="incorrect">D</li>
             </ol>
         </div>
-        <div id="q4" style="display: none;">
+        <div class="question" style="display: none;">
             <h2>Question4</h2>
             <ol>
-                <li id="1">A</li>
-                <li id="2">B</li>
+                <li id="incorrect">A</li>
+                <li id="incorrect">B</li>
                 <li id="correct">C</li>
-                <li id="4">D</li>
+                <li id="incorrect">D</li>
             </ol>
         </div>
-        <div id="q5" style="display: none;">
+        <div class="question" style="display: none;">
             <h2>Question5</h2>
             <ol>
-                <li id="1">A</li>
-                <li id="2">B</li>
-                <li id="3">C</li>
+                <li id="incorrect">A</li>
+                <li id="incorrect">B</li>
+                <li id="incorrect">C</li>
                 <li id="correct">D</li>
             </ol>
         </div>
-        <div id="q6" style="display: none;">
+        <div class="question" style="display: none;">
             <h2>Question6</h2>
             <ol>
-                <li id="1">A</li>
-                <li id="2">B</li>
+                <li id="incorrect">A</li>
+                <li id="incorrect">B</li>
                 <li id="correct">C</li>
-                <li id="4">D</li>
+                <li id="incorrect">D</li>
             </ol>
         </div>
-        <div id="q7" style="display: none;">
+        <div class="question" style="display: none;">
             <h2>Question7</h2>
             <ol>
-                <li id="1">A</li>
-                <li id="2">B</li>
-                <li id="3">C</li>
+                <li id="incorrect">A</li>
+                <li id="incorrect">B</li>
+                <li id="incorrect">C</li>
                 <li id="correct">D</li>
             </ol>
         </div>
-        <div id="q8" style="display: none;">
+        <div class="question" style="display: none;">
             <h2>Question8</h2>
             <ol>
-                <li id="1">A</li>
+                <li id="incorrect">A</li>
                 <li id="correct">B</li>
-                <li id="3">C</li>
-                <li id="4">D</li>
+                <li id="incorrect">C</li>
+                <li id="incorrect">D</li>
             </ol>
         </div>
-        <div id="q9" style="display: none;">
+        <div class="question" style="display: none;">
             <h2>Question9</h2>
             <ol>
-                <li id="1">A</li>
-                <li id="2">B</li>
+                <li id="incorrect">A</li>
+                <li id="incorrect">B</li>
                 <li id="correct">C</li>
-                <li id="4">D</li>
+                <li id="incorrect">D</li>
             </ol>
         </div>
-        <div id="q10" style="display: none;">
+        <div class="question" style="display: none;">
             <h2>Question10</h2>
             <ol>
-                <li id="1">A</li>
-                <li id="2">B</li>
+                <li id="incorrect">A</li>
+                <li id="incorrect">B</li>
                 <li id="correct">C</li>
-                <li id="4">D</li>
+                <li id="incorrect">D</li>
             </ol>
         </div>
         <hr id="line" style="display: none;">
         <h3 id="correctmsg" style="display: none;">Correct!</h3>
         <h3 id="incorrectmsg" style="display: none;">Incorrect!</h3>
-        <button id="next" style="display: none;">Next Question</button>
     </div>
+
+
     <div id="final" style="display: none;">
         <h2>Finished!</h2>
         <span id="finalscore"></span>
