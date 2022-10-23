@@ -13,7 +13,7 @@
     <div id="timer"></div>
     <div id="start">
         <h1>Coding Assesment</h1>
-        <p>You have 1 minute to answer 10 questions. Incorrect asnwers will knock 5 seconds off your time. The quiz is
+        <p>You have 90 seconds to answer 10 questions. Incorrect asnwers will knock 5 seconds off your time. The quiz is
             over when all questions are answered or the timer runs out. Click "Start" to begin.</p>
         <button id="startBtn">Start</button>
     </div>
@@ -111,13 +111,15 @@
         </div>
     </div>
     <div id="response" style="display: none;">
-        <hr id="line">
+        <hr>
         <h3 id="correctmsg" style="display: none;">Correct!</h3>
         <h3 id="incorrectmsg" style="display: none;">Incorrect!</h3>
     </div>
     <div id="final" style="display: none;">
-        <h2>Finished!</h2>
-        <p id="finalscore"></p>
+        <span></span>
+        <button id="calcBtn">Calculate Score</button>
+    </div>
+    <div id = "form" style="display: none;">
         <form>
             <label for="text">Enter Your Initials:</label>
             <input type="text" placeholder="AAA" /><button id="submitBtn">Submit</button>
