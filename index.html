@@ -18,95 +18,96 @@
         <button id="startBtn">Start</button>
     </div>
     <div id="quiz" style="display: none;">
-        <div class="question">
-            <h2>By default, what happens to a form element after information is submitted?</h2>
+        <div>
+            <h2>By default, what happens to a form after the information is submitted?</h2>
             <ul>
                 <li>A) It turns into emojis you don't understand</li>
-                <li>B) The information in the form is preserved</li>
-                <li id="correct"><span>C) It resets</span></li>
+                <li>B) The information in the form is preserved forever</li>
+                <li id="correct"><span>C) The form refreshes and the information is overwritten</span></li>
                 <li>D) It is lost forever to the DMV but your late fee still applies</li>
             </ul>
         </div>
-        <div class="question" style="display: none;">
-            <h2>Did it work?</h2>
+        <div style="display: none;">
+            <h2>What does the "addEventListener()" method do?</h2>
             <ul>
-                <li id="correct"><span>A) Yes!</span></li>
-                <li>B) No</li>
-                <li>C) Nope</li>
-                <li>D) Definitely not</li>
+                <li id="correct"><span>A) It calls a specific function once a specified event happens to the target</span></li>
+                <li>B) It queues up a line of people outside of your store so your business looks booming</li>
+                <li>C) It stores a series of functions inside a specific target to be called upon later</li>
+                <li>D) It presses the internet record button so Google can customize your ad experience</li>
             </ul>
         </div>
 
-        <div class="question" style="display: none;">
-            <h2>What is even happening rn? </h2>
+        <div style="display: none;">
+            <h2>What operator is used to add one to the previous value? </h2>
             <ul>
-                <li>A) </li>
-                <li id="correct"><span>B) No Idea</span></li>
-                <li>C) </li>
-                <li>D) </li>
+                <li>A) +1<li>
+                <li id="correct"><span>B) ++</span></li>
+                <li>C) +=</li>
+                <li>D) =+</li>
             </ul>
         </div>
-        <div class="question" style="display: none;">
-            <h2>Question4</h2>
+        <div style="display: none;">
+            <h2>Can you modify the HTML doc with Javascript?</h2>
             <ul>
-                <li>A) </li>
-                <li>B) </li>
-                <li id="correct"><span>C) orrect</span></li>
-                <li>D) </li>
+                <li>A) No, silly head. .html files are for HTMLies and .js files for JavyScripties</li>
+                <li>B) Yes, you can write html code into the .js file just like you would to the html file.</li>
+                <li id="correct"><span>C) Yes, with various methods if the js. file is linked to the bottom of the .html file</span></li>
+                <li>D) No, there is no way to modify the .html file beyond changes to the .html file and to the linked .css file. </li>
             </ul>
         </div>
-        <div class="question" style="display: none;">
-            <h2>Question5</h2>
+        <div style="display: none;">
+            <h2>What method in javascript creates an element in the .html document?</h2>
             <ul>
-                <li>A) </li>
-                <li>B) </li>
-                <li>C) </li>
-                <li id="correct"><span>D) orrect</span></li>
+                <li>A) Node.removeChild(child)</li>
+                <li>B) variable.setAttribute("attribute")</li>
+                <li>C) Element.append(Node)</li>
+                <li id="correct"><span>D) document.createElement("tagName")</span></li>
             </ul>
         </div>
-        <div class="question" style="display: none;">
-            <h2>Question6</h2>
+        <div style="display: none;">
+            <h2>How do you assign a variable to a group of html elements with the same selector?</h2>
             <ul>
-                <li>A) </li>
-                <li>B) </li>
-                <li id="correct"><span>C) orrect</span></li>
-                <li>D) </li>
+                <li>A) variable = document.allElements(selector)</li>
+                <li>B) variable = document.getElementById("id")</li>
+                <li id="correct"><span>C) variable = document.querySelectorAll(selectors)
+                </span></li>
+                <li>D) variable = document.querySelector(selector)</li>
             </ul>
         </div>
-        <div class="question" style="display: none;">
-            <h2>Question7</h2>
+        <div style="display: none;">
+            <h2>How can you check your Javascript?</h2>
             <ul>
-                <li>A) </li>
-                <li>B) </li>
-                <li>C) </li>
-                <li id="correct"><span>D) </span></li>
+                <li>A) Why do you need to check? You will always write everything perfectly on the first try</li>
+                <li>B) checking the dynamic changes in the .html file after inspecting the file in the browser</li>
+                <li>C) console.log() various variables in the .js file and checking the console log in the browser</li>
+                <li id="correct"><span>D) Both B and C, the person who wrote A is lying to you, do not trust them</span></li>
             </ul>
         </div>
-        <div class="question" style="display: none;">
-            <h2>Question8</h2>
+        <div style="display: none;">
+            <h2>How do you save a value to local storage?</h2>
             <ul>
-                <li>A) </li>
-                <li id="correct"><span>B) orrect</span></li>
-                <li>C) </li>
-                <li>D) </li>
+                <li>A) value.localStorage.getItem("keyName")</li>
+                <li id="correct"><span>B) value = localStorage.setItem("keyName", value)</span></li>
+                <li>C) vale.localStorage.saveItem("keyName", value)</li>
+                <li>D) value.localStorage.vale("keyName", value)</li>
             </ul>
         </div>
-        <div class="question" style="display: none;">
-            <h2>Question9</h2>
+        <div style="display: none;">
+            <h2>How do you add an event listener to a variable the user clicks?</h2>
             <ul>
-                <li>A) </li>
-                <li>B) </li>
-                <li id="correct"><span>C) orrect</span></li>
-                <li>D) </li>
+                <li>A) addEventListener("keydown", function (event) {variable = "click"})</li>
+                <li>B) addEventListener("variable", function (click))</li>
+                <li id="correct"><span>C) addEventListener("click", function (event) {variable = event.target})</span></li>
+                <li>D) addEventListener("click", variable)</li>
             </ul>
         </div>
-        <div class="question" style="display: none;">
-            <h2>Question10</h2>
+        <div style="display: none;">
+            <h2>Hey kid, wanna know how to clear your local storage?</h2>
             <ul>
-                <li>A) </li>
-                <li>B) </li>
-                <li id="correct"><span>C) orrect</span></li>
-                <li>D) </li>
+                <li>A) localStorage.getItem("null")</li>
+                <li>B) localStorage.setItem("key", "")</li>
+                <li id="correct"><span>C) localStorage.clear()</span></li>
+                <li>D) localStorage.setItem("key", 0)</li>
             </ul>
         </div>
     </div>
