@@ -18,8 +18,6 @@ nextBtn.textContent = "Next Question";
 var final = document.getElementById("final");
 var submitBtn = document.getElementById("submitBtn");
 var highscore = document.getElementById("highscore");
-var highscores = [];
-var previousHighScores = [];
 var againBtn = document.getElementById("againBtn");
 var clearBtn = document.getElementById("clearBtn");
 
@@ -90,7 +88,7 @@ submitBtn.addEventListener("click", function (event) {
 
     final.style.display = "none";
     // LogRoundScore();
-    finalscore = (score + time) * 10
+    var finalscore = (score + time) * 10
     console.log(finalscore)
 
     // LogRoundInitials();
@@ -104,32 +102,72 @@ submitBtn.addEventListener("click", function (event) {
     highscore.children[0].append(finalscorep);
 
     //working
+    var highscores = localStorage.getItem("highscores")
+    if ((highscores == null)) {
+        highscores = localStorage.getItem("highscores")
+        var previousHighScores = []
+        previousHighScores.push(highscores)
+        console.log(previousHighScores)
 
-    previousHighScores = JSON.parse(localStorage.getItem("highscores"))
-    console.log(previousHighScores)
+        var thisroundLog = {
+            initialslog: initials,
+            finalscorelog: finalscore
+        };
 
-    var thisroundLog = {
-        initialslog: initials,
-        finalscorelog: finalscore
-    };
-    localStorage.setItem("thisroundLog", JSON.stringify(thisroundLog))
-    console.log(thisroundLog)
+        localStorage.setItem("thisroundLog", JSON.stringify(thisroundLog))
+        console.log(thisroundLog)
 
-    previousHighScores.push(thisroundLog)   
-    localStorage.setItem("highscores", JSON.stringify(previousHighScores))
-    console.log(highscores)
+        previousHighScores.push(thisroundLog)
+        console.log(previousHighScores)
+
+        localStorage.setItem("highscores", JSON.stringify(previousHighScores))
+        console.log(highscores)
+        console.log(previousHighScores)
+    }
+    else {
+        highscores = localStorage.getItem("highscores")
+        var previousHighScores = []
+        previousHighScores = JSON.parse(localStorage.getItem("highscores"))
+        console.log(previousHighScores)
+
+        var thisroundLog = {
+            initialslog: initials,
+            finalscorelog: finalscore
+        };
+
+        localStorage.setItem("thisroundLog", JSON.stringify(thisroundLog))
+        console.log(thisroundLog)
+
+        previousHighScores.push(thisroundLog)
+        console.log(previousHighScores)
+
+        localStorage.setItem("highscores", JSON.stringify(previousHighScores))
+        console.log(highscores)
+    }
 
     var thisroundli = document.createElement("li")
     thisroundli.textContent = thisroundLog.finalscorelog + " .................... " + thisroundLog.initialslog
     highscore.children[2].append(thisroundli)
+
+    var highscoresli1 = document.createElement("li")
+    highscoresli1.textContent = JSON.stringify(previousHighScores[1].initialslog + " .................... " + previousHighScores[1].finalscorelog)
+    highscore.children[2].append(highscoresli1)
+
+    var highscoresli2 = document.createElement("li")
+    highscoresli2.textContent = JSON.stringify(previousHighScores[2].initialslog + " .................... " + previousHighScores[2].finalscorelog)
+    highscore.children[2].append(highscoresli2)
+
+    var highscoresli3 = document.createElement("li")
+    highscoresli3.textContent = JSON.stringify(previousHighScores[3].initialslog + " .................... " + previousHighScores[3].finalscorelog)
+    highscore.children[2].append(highscoresli3)
     //working  
 
-    var initialsli = document.createElement("li");
-    initialsli.textContent = initials;
-    var highli = document.createElement("li");
-    highli.textContent = finalscore;
-    highscore.children[2].append(initialsli)
-    highscore.children[2].append(highli)
+    // var initialsli = document.createElement("li");
+    // initialsli.textContent = initials;
+    // var highli = document.createElement("li");
+    // highli.textContent = finalscore;
+    // highscore.children[2].append(initialsli)
+    // highscore.children[2].append(highli)
 })
 
 //issue: does not display highscore div and it is driving me to rage
@@ -141,5 +179,5 @@ againBtn.addEventListener("click", function () {
 
 clearBtn.addEventListener("click", function () {
     highscoresList.innerHTML = ""
-    localStorage.setItem("highscores", "")
+    localStorage.clear()
 })
