@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div id="timer"></div>
+    <div id="timer">Time Left: 90s</div>
     <div id="start">
         <h1>Coding Assesment</h1>
         <p>You have 90 seconds to answer 10 questions. Incorrect asnwers will knock 5 seconds off your time. The quiz is
@@ -20,94 +20,94 @@
     <div id="quiz" style="display: none;">
         <div class="question">
             <h2>By default, what happens to a form element after information is submitted?</h2>
-            <ol>
+            <ul>
                 <li>A) It turns into emojis you don't understand</li>
                 <li>B) The information in the form is preserved</li>
                 <li id="correct"><span>C) It resets</span></li>
                 <li>D) It is lost forever to the DMV but your late fee still applies</li>
-            </ol>
+            </ul>
         </div>
         <div class="question" style="display: none;">
             <h2>Did it work?</h2>
-            <ol>
-                <li id="correct"><span>Yes!</span></li>
-                <li>No</li>
-                <li>Nope</li>
-                <li>Definitely not</li>
-            </ol>
+            <ul>
+                <li id="correct"><span>A) Yes!</span></li>
+                <li>B) No</li>
+                <li>C) Nope</li>
+                <li>D) Definitely not</li>
+            </ul>
         </div>
 
         <div class="question" style="display: none;">
             <h2>What is even happening rn? </h2>
-            <ol>
-                <li>A</li>
-                <li id="correct"><span>No Idea</span></li>
-                <li>C</li>
-                <li>D</li>
-            </ol>
+            <ul>
+                <li>A) </li>
+                <li id="correct"><span>B) No Idea</span></li>
+                <li>C) </li>
+                <li>D) </li>
+            </ul>
         </div>
         <div class="question" style="display: none;">
             <h2>Question4</h2>
-            <ol>
-                <li>A</li>
-                <li>B</li>
-                <li id="correct"><span>Correct</span></li>
-                <li>D</li>
-            </ol>
+            <ul>
+                <li>A) </li>
+                <li>B) </li>
+                <li id="correct"><span>C) orrect</span></li>
+                <li>D) </li>
+            </ul>
         </div>
         <div class="question" style="display: none;">
             <h2>Question5</h2>
-            <ol>
-                <li>A</li>
-                <li>B</li>
-                <li>C</li>
-                <li id="correct"><span>Dorrect</span></li>
-            </ol>
+            <ul>
+                <li>A) </li>
+                <li>B) </li>
+                <li>C) </li>
+                <li id="correct"><span>D) orrect</span></li>
+            </ul>
         </div>
         <div class="question" style="display: none;">
             <h2>Question6</h2>
-            <ol>
-                <li>A</li>
-                <li>B</li>
-                <li id="correct"><span>Correct</span></li>
-                <li>D</li>
-            </ol>
+            <ul>
+                <li>A) </li>
+                <li>B) </li>
+                <li id="correct"><span>C) orrect</span></li>
+                <li>D) </li>
+            </ul>
         </div>
         <div class="question" style="display: none;">
             <h2>Question7</h2>
-            <ol>
-                <li>A</li>
-                <li>B</li>
-                <li>C</li>
-                <li id="correct"><span>D</span></li>
-            </ol>
+            <ul>
+                <li>A) </li>
+                <li>B) </li>
+                <li>C) </li>
+                <li id="correct"><span>D) </span></li>
+            </ul>
         </div>
         <div class="question" style="display: none;">
             <h2>Question8</h2>
-            <ol>
-                <li>A</li>
-                <li id="correct"><span>Borrect</span></li>
-                <li>C</li>
-                <li>D</li>
-            </ol>
+            <ul>
+                <li>A) </li>
+                <li id="correct"><span>B) orrect</span></li>
+                <li>C) </li>
+                <li>D) </li>
+            </ul>
         </div>
         <div class="question" style="display: none;">
             <h2>Question9</h2>
-            <ol>
-                <li>A</li>
-                <li>B</li>
-                <li id="correct"><span>Correct</span></li>
-                <li>D</li>
-            </ol>
+            <ul>
+                <li>A) </li>
+                <li>B) </li>
+                <li id="correct"><span>C) orrect</span></li>
+                <li>D) </li>
+            </ul>
         </div>
         <div class="question" style="display: none;">
             <h2>Question10</h2>
-            <ol>
-                <li>A</li>
-                <li>B</li>
-                <li id="correct"><span>Correct</span></li>
-                <li>D</li>
-            </ol>
+            <ul>
+                <li>A) </li>
+                <li>B) </li>
+                <li id="correct"><span>C) orrect</span></li>
+                <li>D) </li>
+            </ul>
         </div>
     </div>
     <div id="response" style="display: none;">
@@ -117,19 +117,17 @@
     </div>
     <div id="final" style="display: none;">
         <span></span>
-        <button id="calcBtn">Calculate Score</button>
-    </div>
-    <div id = "form" style="display: none;">
         <form>
             <label for="text">Enter Your Initials:</label>
-            <input type="text" placeholder="AAA" /><button id="submitBtn">Submit</button>
+            <input type="text" placeholder="AAA" id="initials" />
+            <button id="submitBtn">Submit</button>
         </form>
     </div>
     <div id="highscore" style="display: none;">
-        <h2><span>Highscores</span></h2>
+        <span></span>
+        <h2>Highscores</h2>
         <ol id="highscoresList">
-            <li>Testing</li>
-            <li>testagain</li>
+
         </ol>
         <div id="restart">
             <button id="againBtn">Play Again</button>
