@@ -1,9 +1,3 @@
-
-//render array of scores from highest to lowest
-//log high scores in local storage, push values into highscore array, sort array
-//numberArray.sort(compareNumbers);
-//or append new score above or below depending on value (how would we do this for multiple values?)
-
 var start = document.getElementById("start");
 var startBtn = document.getElementById("startBtn");
 var time = 90;
@@ -101,11 +95,13 @@ submitBtn.addEventListener("click", function (event) {
     finalscorep.textContent = "You scored " + finalscore + " this round!";
     highscore.children[0].append(finalscorep);
 
-    //working
+    //highscore storage hell
     var highscores = localStorage.getItem("highscores")
     if ((highscores == null)) {
         highscores = localStorage.getItem("highscores")
+        //kept getting push error becuase previousHighScores was not recognized as array
         var previousHighScores = []
+        //need to pull null value into previousHighScores array
         previousHighScores.push(highscores)
         console.log(previousHighScores)
 
@@ -127,6 +123,7 @@ submitBtn.addEventListener("click", function (event) {
     else {
         highscores = localStorage.getItem("highscores")
         var previousHighScores = []
+        //can equal highscores value now that it is not null
         previousHighScores = JSON.parse(localStorage.getItem("highscores"))
         console.log(previousHighScores)
 
@@ -144,35 +141,43 @@ submitBtn.addEventListener("click", function (event) {
         localStorage.setItem("highscores", JSON.stringify(previousHighScores))
         console.log(highscores)
     }
+    //sorts highscores from highest to lowest
+    previousHighScores.sort((a,b) => {
+        if (a===null){
+            return 1;
+        }
+        if (b===null){
+            return -1;
+        }
+        return b.finalscorelog - a.finalscorelog
+    })
+    console.log(previousHighScores)
 
-    var thisroundli = document.createElement("li")
-    thisroundli.textContent = thisroundLog.finalscorelog + " .................... " + thisroundLog.initialslog
-    highscore.children[2].append(thisroundli)
-
+    //appends top 5 highscores to html doc
     var highscoresli1 = document.createElement("li")
-    highscoresli1.textContent = JSON.stringify(previousHighScores[1].initialslog + " .................... " + previousHighScores[1].finalscorelog)
+    highscoresli1.textContent = JSON.stringify(previousHighScores[0].initialslog + " .................... " + previousHighScores[0].finalscorelog)
     highscore.children[2].append(highscoresli1)
 
     var highscoresli2 = document.createElement("li")
-    highscoresli2.textContent = JSON.stringify(previousHighScores[2].initialslog + " .................... " + previousHighScores[2].finalscorelog)
+    highscoresli2.textContent = JSON.stringify(previousHighScores[1].initialslog + " .................... " + previousHighScores[1].finalscorelog)
     highscore.children[2].append(highscoresli2)
 
     var highscoresli3 = document.createElement("li")
-    highscoresli3.textContent = JSON.stringify(previousHighScores[3].initialslog + " .................... " + previousHighScores[3].finalscorelog)
+    highscoresli3.textContent = JSON.stringify(previousHighScores[2].initialslog + " .................... " + previousHighScores[2].finalscorelog)
     highscore.children[2].append(highscoresli3)
-    //working  
 
-    // var initialsli = document.createElement("li");
-    // initialsli.textContent = initials;
-    // var highli = document.createElement("li");
-    // highli.textContent = finalscore;
-    // highscore.children[2].append(initialsli)
-    // highscore.children[2].append(highli)
+    var highscoresli4 = document.createElement("li")
+    highscoresli4.textContent = JSON.stringify(previousHighScores[3].initialslog + " .................... " + previousHighScores[3].finalscorelog)
+    highscore.children[2].append(highscoresli4)
+
+    var highscoresli5 = document.createElement("li")
+    highscoresli5.textContent = JSON.stringify(previousHighScores[4].initialslog + " .................... " + previousHighScores[4].finalscorelog)
+    highscore.children[2].append(highscoresli5)
+    //end of highscore storage hell   
 })
 
 //issue: does not display highscore div and it is driving me to rage
 //PREVENT DEFAULT DUDE IT WAS A FOOOOOORM!!!
-
 againBtn.addEventListener("click", function () {
     location.reload()
 })
