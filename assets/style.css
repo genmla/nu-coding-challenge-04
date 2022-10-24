@@ -1,3 +1,18 @@
+
+p{
+    width: 35%;
+}
+
+h2 {
+    width: 75%
+}
+
+ul {
+    /* border: 2px solid black; */
+    list-style-type: none;
+    width: 55%;
+}
+
 li {
 border: 1px, solid black;
 /* background-color: rgb(78, 42, 132); */
@@ -9,9 +24,11 @@ margin: 5px;
 
 li:hover{
     cursor: pointer;
+    text-decoration: underline;
 }
 
-ul {
-    width: 30%;
-    list-style-type: none;
+#timer  {
+    font-family: monospace;
+    font-size: 25px;
+    font-weight: 600;
 }

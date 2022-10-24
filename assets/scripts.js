@@ -155,23 +155,23 @@ submitBtn.addEventListener("click", function (event) {
 
     //appends top 5 highscores to html doc
     var highscoresli1 = document.createElement("li")
-    highscoresli1.textContent = JSON.stringify(previousHighScores[0].initialslog + " .................... " + previousHighScores[0].finalscorelog)
+    highscoresli1.textContent = (previousHighScores[0].initialslog + " .................... " + previousHighScores[0].finalscorelog)
     highscore.children[2].append(highscoresli1)
 
     var highscoresli2 = document.createElement("li")
-    highscoresli2.textContent = JSON.stringify(previousHighScores[1].initialslog + " .................... " + previousHighScores[1].finalscorelog)
+    highscoresli2.textContent = (previousHighScores[1].initialslog + " .................... " + previousHighScores[1].finalscorelog)
     highscore.children[2].append(highscoresli2)
 
     var highscoresli3 = document.createElement("li")
-    highscoresli3.textContent = JSON.stringify(previousHighScores[2].initialslog + " .................... " + previousHighScores[2].finalscorelog)
+    highscoresli3.textContent = (previousHighScores[2].initialslog + " .................... " + previousHighScores[2].finalscorelog)
     highscore.children[2].append(highscoresli3)
 
     var highscoresli4 = document.createElement("li")
-    highscoresli4.textContent = JSON.stringify(previousHighScores[3].initialslog + " .................... " + previousHighScores[3].finalscorelog)
+    highscoresli4.textContent = (previousHighScores[3].initialslog + " .................... " + previousHighScores[3].finalscorelog)
     highscore.children[2].append(highscoresli4)
 
     var highscoresli5 = document.createElement("li")
-    highscoresli5.textContent = JSON.stringify(previousHighScores[4].initialslog + " .................... " + previousHighScores[4].finalscorelog)
+    highscoresli5.textContent = (previousHighScores[4].initialslog + " .................... " + previousHighScores[4].finalscorelog)
     highscore.children[2].append(highscoresli5)
     //end of highscore storage hell   
 })
