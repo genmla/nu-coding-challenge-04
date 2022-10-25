@@ -15,7 +15,7 @@ This project can be used to test basic knowledge about javascript, specifically 
 
 ![GIF showing the user starting the assesment, clicking through the questions, entering initials, clearing highscores, and playing again](/assets/Coding-Assessment-Gif.gif)
 
-URL: 
+URL: https://genmla.github.io/nu-coding-challenge-04/
 
 ## Credits
 
